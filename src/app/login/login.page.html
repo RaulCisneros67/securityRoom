@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>SecurityRoom</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div style="display: flex; justify-content: center;" class="margin">
+
+
+        <img src="./assets/Room2.0.png">
+
+    </div>
+
+    <ion-card-header color="black">
+        <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <form [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="password" type="password"></ion-input>
+            </ion-item>
+            <ion-button type="submit" expand="block" [disabled]="!userForm.valid">Iniciar Sesion</ion-button>
+
+        </form>
+        <br>
+    </ion-card-content>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="end">
+            <ion-button [routerLink]="['/registro']" color="dark "> Registarse</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

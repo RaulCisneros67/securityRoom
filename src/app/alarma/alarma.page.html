@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-button color="danger">
+            <ion-menu-button color="secondary" autoHide="false"></ion-menu-button>
+        </ion-button>
+        <ion-title>Alarma</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <center class="ion-margin">
+
+        <div class="marginnn">
+            <img src="./assets/Room2.0.png">
+        </div>
+
+
+
+        <button type="boolean" class="ion-no-margin " (click)="click()">
+
+            <ion-icon class="grande" [name]="buttonDisabled? 'alert': 'happy'"
+                [color]="buttonDisabled? 'danger': 'success'"></ion-icon>
+        </button>
+    </center>
+
+
+</ion-content>

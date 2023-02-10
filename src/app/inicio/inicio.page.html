@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-button color="danger">
+            <ion-menu-button color="secondary" autoHide="false"></ion-menu-button>
+        </ion-button>
+        <ion-title>Registros</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid   class="center-grid ion-padding">
+    
+        <ion-list>
+          
+          <ion-item *ngFor="let registro of registros ">
+            
+            <ion-label>
+              
+              <br>
+              <strong>Distancia Calculada en cm: </strong> {{registro.DistanciaActivada}}
+              <p><strong>Fecha: </strong>{{registro.Fecha | date:'medium'}}</p>
+            </ion-label>
+    
+          </ion-item>
+    
+    
+      </ion-list>
+      </ion-grid>
+    
+
+</ion-content>
